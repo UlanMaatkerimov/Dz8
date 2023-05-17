@@ -10,7 +10,7 @@ public class RPG_Game {
     public static Random random = new Random();
 
     public static void startGame() {
-        Boss boss = new Boss(1500, 50);
+        Boss boss = new Boss(10000, 50);
 
         Warrior warrior = new Warrior(270, 25);
         Magic magic = new Magic(250, 25,5);
@@ -18,8 +18,12 @@ public class RPG_Game {
         Medic doc = new Medic(230, 5, 15);
         Medic assistant = new Medic(290, 10, 5);
         Thor thor = new Thor(200,20);
+        Tank tank = new Tank(450,5);
+        Witcher witcher = new Witcher(270,15);
+        Antman antman = new Antman(150,10);
 
-        Hero[] heroes = {warrior, magic, berserk, doc, assistant,thor};
+
+        Hero[] heroes = {warrior, magic, berserk, doc, assistant,thor,tank,witcher,antman};
 
         printStatistic(boss, heroes);
         while (!isGameFinish(boss, heroes)) {
@@ -79,7 +83,7 @@ public class RPG_Game {
         System.out.println("Boss health: " + boss.getHealth() +
                 " " + " Damage: [" + boss.getDamage() + "]");
         for (int i = 0; i < heroes.length; i++) {
-            System.out.println(heroes[i].getClass().getSimpleName() + " length: " + heroes[i].getHealth() +
+            System.out.println(heroes[i].getClass().getSimpleName() + " health: " + heroes[i].getHealth() +
                     " " + "Damage: [" + heroes[i].getDamage() + "]");
         }
         System.out.println("                 ");

@@ -16,6 +16,8 @@ public class Thor extends Hero {
                     boss.setDamage(0);
                     System.out.println("Worked " + this.getClass().getSimpleName()+ " stun");
                     break;
+                }else {
+                    boss.setDamage(50);
                 }
             }
         }

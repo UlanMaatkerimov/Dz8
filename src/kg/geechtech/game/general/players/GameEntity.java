@@ -28,6 +28,10 @@ public abstract class GameEntity {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
+        if (health <= 0) {
+            this.damage = 0;
+        } else {
+            this.damage = damage;
+        }
     }
 }

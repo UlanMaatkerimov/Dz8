@@ -14,8 +14,7 @@ public class Medic extends Hero {
         for (int i = 0; i < hero.length; i++) {
             if (hero[i].getHealth() > 0 && hero[i].getHealth() < 100 && this != hero[i]) {
                 hero[i].setHealth(hero[i].getHealth() + this.healPoints);
-                System.out.println(this.getClass().getSimpleName() + " " + "health point " + this.healPoints + " " +
-                        hero[i].getClass().getSimpleName());
+                System.out.println(this.getClass().getSimpleName() + " " + "health point " + this.healPoints + " " + hero[i].getClass().getSimpleName() );
 
 
             }

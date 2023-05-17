@@ -14,7 +14,6 @@ public class Warrior extends Hero {
     @Override
     public void applySuperPower(Boss boss, Hero[] hero) {
         if (boss.getHealth() > 0) {
-
             int rand = RPG_Game.random.nextInt(4) + 2;
             boss.setHealth(boss.getHealth() - this.getDamage() * rand);
             System.out.println("Warrior critical damage hits boss "

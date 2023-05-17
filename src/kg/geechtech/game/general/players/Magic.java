@@ -7,7 +7,6 @@ public class Magic extends Hero {
 
     public Magic(int health, int damage, int magicPoints) {
         super(health, damage, SuperAbility.MAGIC_POWER);
-
         this.magicPoints = magicPoints;
     }
 
